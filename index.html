@@ -698,6 +698,37 @@
       nav { padding: 11px 0; }
       #estratto { scroll-margin-top: 136px; }
     }
+
+    /* ─── SEZIONE ACQUISTO — STESSA PALETTE DEL SITO ───────── */
+    .purchase-box {
+      text-align: center;
+      padding: 48px 36px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+    .purchase-box .eyebrow { margin-bottom: 12px; }
+    .purchase-box h2 { font-size: 28px; margin-bottom: 12px; }
+    .purchase-description {
+      margin: 0 auto 26px;
+      max-width: 490px;
+      color: var(--text-sec);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+    .purchase-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+    .purchase-box .purchase-note {
+      max-width: 450px;
+      margin: 18px auto 0;
+      color: var(--text-muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    @media (max-width: 640px) {
+      .purchase-box { padding: 36px 22px; }
+      .purchase-box h2 { font-size: 26px; }
+      .purchase-links .btn { max-width: 100%; }
+    }
 </style>
 </head>
 <body>
@@ -706,7 +737,7 @@
 <div class="container">
 <a class="nav-logo" href="#home">ARDGLASSAN</a>
 <ul class="nav-links">
-<li><a href="#newsletter">avvisami</a></li>
+<li><a href="#acquista">acquista</a></li>
 <li><a href="#estratto">estratto</a></li>
 <li><a href="#folklore">folklore</a></li>
 <li><a href="#playlist">playlist</a></li>
@@ -735,7 +766,7 @@
             Un thriller psicologico a tinte gotiche sulle ossessioni, sulle verità che ciascuno costruisce e sulla distanza che può crescere fra due persone.
           </p>
 <div class="hero-buttons">
-<a class="btn btn-primary" href="#newsletter">Avvisami quando esce</a>
+<a class="btn btn-primary" href="https://etabeta-ps.com/scheda-libro/salvatore-anello/ardglassan-979-12-5789-464-1-10374.html" target="_blank" rel="noopener noreferrer">Acquista il romanzo</a>
 <a class="btn btn-secondary" href="#storia">Scopri di più</a>
 </div>
 </div>
@@ -1163,12 +1194,19 @@
 </section>
 <div class="divider"></div>
 <!-- ─── NEWSLETTER ────────────────────────────────────────────── -->
-<section id="newsletter">
-<div class="container">
-<div class="newsletter-box">
-<iframe width="100%" height="650" src="https://9942c18c.sibforms.com/v2/serve/MUIFAPm1xzGNiuBVLspVKQJSyxto5CUzMjsKqLDLrBGlP4Yrnus0OYkLz60KrTit3AOn_mecz8VyWrtrjGEHce3LnFa5U9T0zPzhF5auAZo7eeBzKE2j-NdgF1NA3yiq4pdCo8aMEz2u4vEPReTa8aHjdOSQAkkklw6piYVhdjK8czgisj2htzNIHdMcOfBZ4EY_i1kMrovOctztzA==" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
-</div>
-</div>
+<!-- ─── ACQUISTA IL ROMANZO ──────────────────────────────────── -->
+<section id="acquista" aria-labelledby="acquista-title">
+  <div class="container">
+    <div class="purchase-box">
+      <p class="eyebrow">Disponibile ora</p>
+      <h2 id="acquista-title">Acquista Ardglassan</h2>
+      <p class="purchase-description">Il romanzo è disponibile in edizione cartacea sul sito di EtaBeta. Puoi ordinarlo direttamente online.</p>
+      <div class="purchase-links">
+        <a class="btn btn-primary" href="https://etabeta-ps.com/scheda-libro/salvatore-anello/ardglassan-979-12-5789-464-1-10374.html" target="_blank" rel="noopener noreferrer">Acquista su EtaBeta <span aria-hidden="true">↗</span></a>
+      </div>
+      <p class="purchase-note">Gli altri rivenditori saranno aggiunti qui appena disponibili.</p>
+    </div>
+  </div>
 </section>
 <!-- ─── FOOTER ────────────────────────────────────────────────── -->
 <footer>
@@ -1179,7 +1217,7 @@
 <li><a href="#">Torna su</a></li>
 <li><a href="#folklore">Folklore</a></li>
 <li><a href="#playlist">Playlist</a></li>
-<li><a href="#newsletter">Contatti</a></li>
+<li><a href="#acquista">Acquista</a></li>
 </ul>
 <p class="footer-copy">© 2026 Salvatore Anello · Tutti i diritti riservati</p>
 </div>
