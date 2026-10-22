@@ -716,7 +716,14 @@
       font-size: 15px;
       line-height: 1.75;
     }
-    .purchase-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+    .purchase-links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 472px;
+      margin: 0 auto;
+    }
+    .purchase-links .btn { width: 100%; justify-content: center; text-align: center; }
     .purchase-box .purchase-note {
       max-width: 450px;
       margin: 18px auto 0;
@@ -727,6 +734,7 @@
     @media (max-width: 640px) {
       .purchase-box { padding: 36px 22px; }
       .purchase-box h2 { font-size: 26px; }
+      .purchase-links { grid-template-columns: 1fr; max-width: 360px; }
       .purchase-links .btn { max-width: 100%; }
     }
 </style>
@@ -1200,11 +1208,14 @@
     <div class="purchase-box">
       <p class="eyebrow">Disponibile ora</p>
       <h2 id="acquista-title">Acquista Ardglassan</h2>
-      <p class="purchase-description">Il romanzo è disponibile in edizione cartacea sul sito di EtaBeta. Puoi ordinarlo direttamente online.</p>
+      <p class="purchase-description">Il romanzo è disponibile in edizione cartacea. Scegli la libreria online da cui preferisci ordinarlo.</p>
       <div class="purchase-links">
-        <a class="btn btn-primary" href="https://etabeta-ps.com/scheda-libro/salvatore-anello/ardglassan-979-12-5789-464-1-10374.html" target="_blank" rel="noopener noreferrer">Acquista su EtaBeta <span aria-hidden="true">↗</span></a>
+        <a class="btn btn-primary" href="https://etabeta-ps.com/scheda-libro/salvatore-anello/ardglassan-979-12-5789-464-1-10374.html" target="_blank" rel="noopener noreferrer" aria-label="Acquista Ardglassan su EtaBeta (apre una nuova scheda)">EtaBeta <span aria-hidden="true">↗</span></a>
+        <a class="btn btn-secondary" href="https://www.ibs.it/ardglassan-libro-salvatore-anello/e/9791257894641" target="_blank" rel="noopener noreferrer" aria-label="Acquista Ardglassan su IBS (apre una nuova scheda)">IBS <span aria-hidden="true">↗</span></a>
+        <a class="btn btn-secondary" href="https://www.lafeltrinelli.it/ardglassan-libro-salvatore-anello/e/9791257894641" target="_blank" rel="noopener noreferrer" aria-label="Acquista Ardglassan su Feltrinelli (apre una nuova scheda)">Feltrinelli <span aria-hidden="true">↗</span></a>
+        <a class="btn btn-secondary" href="https://www.libraccio.it/libro/9791257894641/salvatore-anello/ardglassan.html" target="_blank" rel="noopener noreferrer" aria-label="Acquista Ardglassan su Libraccio (apre una nuova scheda)">Libraccio <span aria-hidden="true">↗</span></a>
       </div>
-      <p class="purchase-note">Gli altri rivenditori saranno aggiunti qui appena disponibili.</p>
+      <p class="purchase-note">Altri rivenditori saranno aggiunti quando l'acquisto sarà disponibile.</p>
     </div>
   </div>
 </section>
