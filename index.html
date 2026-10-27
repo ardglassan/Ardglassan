@@ -737,6 +737,15 @@
       .purchase-links { grid-template-columns: 1fr; max-width: 360px; }
       .purchase-links .btn { max-width: 100%; }
     }
+
+    /* Centra l’ultimo rivenditore quando i pulsanti sono dispari. */
+    @media (min-width: 701px) {
+      .purchase-links > a:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        width: calc(50% - 6px);
+        justify-self: center;
+      }
+    }
 </style>
 </head>
 <body>
@@ -1214,8 +1223,10 @@
         <a class="btn btn-secondary" href="https://www.ibs.it/ardglassan-libro-salvatore-anello/e/9791257894641" target="_blank" rel="noopener noreferrer" aria-label="Acquista Ardglassan su IBS (apre una nuova scheda)">IBS <span aria-hidden="true">↗</span></a>
         <a class="btn btn-secondary" href="https://www.lafeltrinelli.it/ardglassan-libro-salvatore-anello/e/9791257894641" target="_blank" rel="noopener noreferrer" aria-label="Acquista Ardglassan su Feltrinelli (apre una nuova scheda)">Feltrinelli <span aria-hidden="true">↗</span></a>
         <a class="btn btn-secondary" href="https://www.libraccio.it/libro/9791257894641/salvatore-anello/ardglassan.html" target="_blank" rel="noopener noreferrer" aria-label="Acquista Ardglassan su Libraccio (apre una nuova scheda)">Libraccio <span aria-hidden="true">↗</span></a>
+        <a class="btn btn-secondary" href="https://www.amazon.it/Ardglassan-Salvatore-Anello/dp/B0HNQWDZSK" target="_blank" rel="noopener noreferrer" aria-label="Acquista Ardglassan su Amazon (apre una nuova scheda)">Amazon <span aria-hidden="true">↗</span></a>
+        <a class="btn btn-secondary" href="https://www.mondadoristore.it/ardglassan-libro-salvatore-anello/p/9791257894641" target="_blank" rel="noopener noreferrer" aria-label="Consulta Ardglassan su Mondadori Store (apre una nuova scheda)">Mondadori <span aria-hidden="true">↗</span></a>
       </div>
-      <p class="purchase-note">Altri rivenditori saranno aggiunti quando l'acquisto sarà disponibile.</p>
+      <p class="purchase-note">Disponibilità e tempi di consegna possono variare in base al rivenditore.</p>
     </div>
   </div>
 </section>
